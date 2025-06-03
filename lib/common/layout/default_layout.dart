@@ -20,7 +20,7 @@ class DefaultLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor ?? Colors.white,
-      appBar: AppBar(title: Text(title!), actions: []),
+      appBar: AppBar(title: Text(title!), actions: actions),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: child,

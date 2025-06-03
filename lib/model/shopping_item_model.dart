@@ -16,6 +16,20 @@ class ShoppingItemModel {
     required this.isSpicy,
   });
 
+  ShoppingItemModel copyWith({
+    String? name,
+    int? quantity,
+    bool? hasBought,
+    bool? isSpicy,
+  }) {
+    return ShoppingItemModel(
+      name: name ?? this.name,
+      quantity: quantity ?? this.quantity,
+      hasBought: hasBought ?? this.hasBought,
+      isSpicy: isSpicy ?? this.isSpicy,
+    );
+  }
+
   factory ShoppingItemModel.fromJson(Map<String, dynamic> json) =>
       _$ShoppingItemModelFromJson(json);
 }
