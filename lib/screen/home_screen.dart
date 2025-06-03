@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/common/layout/default_layout.dart';
 import 'package:untitled/screen/auto_dispose_modifier_screen.dart';
+import 'package:untitled/screen/code_generation_screen.dart';
 import 'package:untitled/screen/family_modifier_screen.dart';
 import 'package:untitled/screen/future_provider_screen.dart';
 import 'package:untitled/screen/listen_provider_screen.dart';
@@ -103,6 +104,15 @@ class HomeScreen extends StatelessWidget {
               ).push(MaterialPageRoute(builder: (context) => ProviderScreen()));
             },
             child: Text("Provider Screen"),
+          ),
+
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => CodeGenerationScreen()),
+              );
+            },
+            child: Text("Code Generation Screen"),
           ),
         ],
       ),
